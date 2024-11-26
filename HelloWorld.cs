@@ -59,11 +59,8 @@ namespace HelloWorld2
 			Console.WriteLine(stud4.nr_albumu + " " + stud4.imie + " " + stud4.nazwisko);
 			Console.WriteLine(wyk1.stopien_naukowy + " " + wyk1.imie + " " + wyk1.nazwisko);
 			
-			Console.WriteLine("Linia 62");
 			gd.Wykladowca = wyk1;
-			Console.WriteLine("Linia 64");
 			gd.DodajStudenta(stud1);
-			Console.WriteLine("Linia 66");
 		}
 	}
 	
@@ -116,9 +113,7 @@ namespace HelloWorld2
 	    
 	    public void DodajStudenta(Student student)
 	    {
-	        Console.WriteLine("Linia 124");
 	        studenci.Add(student);
-	        Console.WriteLine("Linia 126");
 	    }
 	}
 }
