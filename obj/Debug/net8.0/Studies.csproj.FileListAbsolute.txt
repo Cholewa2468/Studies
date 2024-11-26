@@ -1,0 +1,15 @@
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\Studies.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\Studies.AssemblyInfoInputs.cache
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\Studies.AssemblyInfo.cs
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\Studies.csproj.CoreCompileInputs.cache
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\Studies.sourcelink.json
+C:\Workspaces\StudiesRepository\Studies\bin\Debug\net8.0\Studies.exe
+C:\Workspaces\StudiesRepository\Studies\bin\Debug\net8.0\Studies.deps.json
+C:\Workspaces\StudiesRepository\Studies\bin\Debug\net8.0\Studies.runtimeconfig.json
+C:\Workspaces\StudiesRepository\Studies\bin\Debug\net8.0\Studies.dll
+C:\Workspaces\StudiesRepository\Studies\bin\Debug\net8.0\Studies.pdb
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\Studies.dll
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\refint\Studies.dll
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\Studies.pdb
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\Studies.genruntimeconfig.cache
+C:\Workspaces\StudiesRepository\Studies\obj\Debug\net8.0\ref\Studies.dll

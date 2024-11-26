@@ -35,12 +35,12 @@ public class HelloWorld
             return this.imie;
         }
         
-        public void UstawNazwisko(string nazwisko) //Set
+        public virtual void UstawNazwisko(string nazwisko) //Set
         {
             this.nazwisko = nazwisko;    
         }
         
-        public string PobierzNazwisko() //Get
+        public virtual string PobierzNazwisko() //Get
         {
             return this.nazwisko;
         }
@@ -71,6 +71,17 @@ public class HelloWorld
             //UstawImie(imie);
             //UstawNazwisko(nazwisko);
         }
+
+        public override void UstawNazwisko(string nazwisko) //Set
+        {
+            this.nazwisko = nazwisko.ToUpper();    
+        }
+        
+        public override string PobierzNazwisko() //Get
+        {
+            string str = this.nazwisko;
+            return char.ToUpper(str[0]) + str.Substring(1);
+        }
     }
     
     public class Pracownik : Osoba
@@ -88,6 +99,17 @@ public class HelloWorld
             //UstawImie(imie);
             //UstawNazwisko(nazwisko);
         }
+
+        public override void UstawNazwisko(string nazwisko) //Set
+        {
+            this.nazwisko = nazwisko.ToUpper();    
+        }
+        
+        public override string PobierzNazwisko() //Get
+        {
+            return this.nazwisko.ToUpper();
+        }
+        
     }
     public static void Main(string[] args)
     {
