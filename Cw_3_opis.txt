@@ -1,0 +1,6 @@
+1. Proszę tak zmodyfikwać kod zawarty w pliku "Cw_3_metody_wirtualne.cs" aby:
+a) nazwisko w przypadku obiektu typu Student zaczynało się zawsze z wielkiej litery, a następne litery były małe, niezależnie od tego jak wpisze je użytkownik
+b) nazwisko w przypadku obiektu typu Pracownik, zawsze zapisane było wielkimi literami, niezależnie od tego jak wpisze je użytkownik
+
+2. Do tego zadania proszę wykorzystać słowa kluczowe "virtual" oraz utworzyć odpowiednie metody wirtualne. Przykładowy opis jest pod poniższym linkiem:
+https://www.c-sharpcorner.com/UploadFile/84c85b/object-oriented-programming-using-C-Sharp-net/
