@@ -1,1 +1,3 @@
 # Studies
+
+Podstawy programowania obiektowego
