@@ -147,7 +147,7 @@ namespace HelloWorld2
 	  protected string imie;
 	  public string Imie
 	    { 
-	        get => imie;
+	        get => char.ToUpper(imie[0]) + imie.Substring(1);
 	        set => imie = value;
 	    }
 	  protected string nazwisko;
@@ -163,7 +163,7 @@ namespace HelloWorld2
 	  }
 	  public void WyswietlDane()
 	  {
-	      Console.Write(" Imie: "+imie + " | Nazwisko: "+Nazwisko);
+	      Console.Write(" Imie: "+ Imie + " | Nazwisko: "+Nazwisko);
 	  }
 	}
 	
