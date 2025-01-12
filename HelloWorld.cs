@@ -46,21 +46,21 @@ namespace HelloWorld2
 			stud2.nazwisko = "KUBIAK";
 			stud2.nr_albumu = 35669;
 			*/
-			Student stud2 = new Student("Konrad", "KUBIAK", 35669);
+			Student stud2 = new Student("Konrad", "Kubiak", 35669);
 			/*
 		    Student stud3 = new Student();
 			stud3.imie = "Żaneta";
 			stud3.nazwisko = "LUBIŃSKA";
 			stud3.nr_albumu = 35900;
 			*/
-			Student stud3 = new Student("Zaneta", "LUBINSKA", 35900);
+			Student stud3 = new Student("Zaneta", "Lubinska", 35900);
 			/*
 			Student stud4 = new Student();
 			stud4.imie = "Krzysztof";
 			stud4.nazwisko = "WRZESIEŃ";
 			stud4.nr_albumu = 35678;
 			*/
-			Student stud4 = new Student("Krzysztof", "WRZESIEN", 35678);
+			Student stud4 = new Student("Krzysztof", "Wrzesien", 35678);
 		    /*
 			Console.WriteLine(stud1.nr_albumu + " " + stud1.imie + " " + stud1.nazwisko);
 			Console.WriteLine(stud2.nr_albumu + " " + stud2.imie + " " + stud2.nazwisko);
@@ -80,7 +80,18 @@ namespace HelloWorld2
 			gd.Wykladowca = wyk1;
 			Console.WriteLine("Linia 64");
 			gd.DodajStudenta(stud1);
+			gd.DodajStudenta(stud2);
+			gd.DodajStudenta(stud3);
+			gd.DodajStudenta(stud4);
+			
 			Console.WriteLine("Linia 66");
+			try{
+			    gd.WyswietlDane();
+			}
+			catch(Exception ex)
+			{
+			    Console.WriteLine(ex.Message);
+			}
 		}
 	}
 	
@@ -88,7 +99,7 @@ namespace HelloWorld2
 	{
 	  //public string imie;
 	  //public string nazwisko;
-	  public int nr_albumu;
+	  private int nr_albumu;
 	  
 	  public Student(string imie, string nazwisko, int nr_albumu)
 	  {
@@ -103,7 +114,7 @@ namespace HelloWorld2
 	  public void WyswietlDane()
 	  {
 	       base.WyswietlDane();
-	       Console.WriteLine(" | Numer albumu: "+nr_albumu+", ");
+	       Console.WriteLine(" | Numer albumu: "+nr_albumu);
 	  }
 	}
 	  
@@ -111,7 +122,7 @@ namespace HelloWorld2
 	{
 	  //string imie;
 	  //string nazwisko;
-	  public string stopien_naukowy;
+	  private string stopien_naukowy;
 	  
 	  public Wykladowca()
 	  {
@@ -133,8 +144,18 @@ namespace HelloWorld2
 	
 	public class Osoba
 	{
-	  public string imie;
-	  public string nazwisko;
+	  protected string imie;
+	  public string Imie
+	    { 
+	        get => imie;
+	        set => imie = value;
+	    }
+	  protected string nazwisko;
+	  public string Nazwisko
+	    { 
+	        get => nazwisko.ToUpper(); 
+	        set => nazwisko = value;
+	    }
 	  
 	  public Osoba()
 	  {
@@ -142,25 +163,61 @@ namespace HelloWorld2
 	  }
 	  public void WyswietlDane()
 	  {
-	      Console.Write(" Imie: "+imie + " | Nazwisko: "+nazwisko);
+	      Console.Write(" Imie: "+imie + " | Nazwisko: "+Nazwisko);
 	  }
 	}
 	
 	class GrupaDydaktyczna
 	{
 	    private string nazwa_grupy;
-	    public string NazwaGrupy { get => nazwa_grupy; set => nazwa_grupy = value;}
+	    public string NazwaGrupy
+	    { 
+	        get => nazwa_grupy; 
+	        set => nazwa_grupy = value;
+	    }
 	    
 	    private Wykladowca wykladowca;
-	    public Wykladowca Wykladowca {get => wykladowca; set=>wykladowca=value;}
+	    public Wykladowca Wykladowca 
+	    {
+	        get => wykladowca; 
+	        set=>wykladowca=value;
+	    }
 	    
 	    private List<Student> studenci = new List<Student>(); 
 	    
+	    private void WyswietlNazweGrupy()
+	    {
+	        Console.WriteLine("Nazwa grupy: "+ this.NazwaGrupy);
+	    }
+	    
+	    private void WyswietlWykladowce()
+	    {
+	        Console.WriteLine("--- Wykladowca: ---");
+	        this.Wykladowca.WyswietlDane();    
+	    }
+	    
 	    public void DodajStudenta(Student student)
 	    {
-	        Console.WriteLine("Linia 124");
+	        //Console.WriteLine("Linia 124");
 	        studenci.Add(student);
-	        Console.WriteLine("Linia 126");
+	        //Console.WriteLine("Linia 126");
+	    }
+	   public void WyswietlListeStudentow()
+	    {
+	        int i = 0;
+	        foreach(Student s in studenci)
+	        {
+	            i++;
+	            Console.WriteLine("--- Student nr "+i+": ---");
+	            s.WyswietlDane();
+	        }
+	    }
+	    
+	    public void WyswietlDane()
+	    {
+	        this.WyswietlNazweGrupy();
+	        this.WyswietlWykladowce();
+	        this.WyswietlListeStudentow();
 	    }
 	}
 }
